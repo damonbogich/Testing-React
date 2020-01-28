@@ -24,6 +24,7 @@ export default function StarWarsCharacters() {
   }, [url]);
 
   const goToNext = e => {
+    console.log(e);
     e.preventDefault();
     setUrl(next);
   };
@@ -54,7 +55,7 @@ export default function StarWarsCharacters() {
         <button onClick={goToPrevious} disabled={!previous}>
           Previous
         </button>
-        <button onClick={goToNext} disabled={!next}>
+        <button data-testid="nextButton" onClick={goToNext} disabled={!next}>
           Next
         </button>
       </div>
